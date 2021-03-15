@@ -21,9 +21,12 @@ class Home extends CI_Controller {
     function index() {
 
 		// $data["title"] = "Dashboard";
-		$data["css"] 		= "/components/css"; // path
-		$data["js"] 		= "/components/js"; // path
-		$data["content"] 	= $this->load->view("home");
+		$data["css"] 		= "landing/css/css"; // path
+		$data["js"] 		= "landing/js/js"; // path
+
+		$dt = []; // passing the data here
+
+		$data["content"] 	= $this->load->view("landing/home",$dt,true);
 		
 		$this->load->view("index",$data);
 	}
