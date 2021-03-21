@@ -94,9 +94,9 @@
 
         function plant_insert($dt) {
             $data = array(
-        
                 'plant_name'  => $dt["plant_name"],
                 'price'       => $dt["price"],
+                "description" => $dt["description"],
                 'type'        => $dt["type"],
             );
 

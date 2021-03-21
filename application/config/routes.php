@@ -55,6 +55,7 @@ $route["admin/auth/login/process"]  = "admin_auth/login_process";
 
 $route["admin/auth/login"]          = "admin_auth/login";
 $route["admin/plant/list"]          = "admin_plant/plant_list";
+$route["admin/plant/add"]           = "admin_plant/plant_add_process";
 
 $route["admin/plants"]              = "admin_plant/index";
 $route["admin/user"]                = "user/index";
