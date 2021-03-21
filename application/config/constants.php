@@ -94,6 +94,7 @@ define("DB_DATABASE","ruang_bertanam");
 // =================================== TABLE CONSTANT ====================================//
 define("USER_TABLE","m_users");
 define("GROUP_TABLE","m_groups");
+define("PLANT_TABLE","plants");
 // define("MENU_TABLE","m_menu");
 // define("MENU_ACTION_TABLE","m_menu_action");
 // define("GROUP_MENU_TABLE","tr_group_menu");

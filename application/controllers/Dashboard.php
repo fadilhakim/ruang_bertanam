@@ -1,29 +1,22 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class Dashboard extends CI_Controller {
-        function __construct(){
-            parent::__construct();
-            validSessionIsOut();
-            $this->authorization->redirect_menu("dashboard");
-            $this->db2 = $this->load->database("db2", true);
-            $this->load->model("mom_model");
-        }
+class Dashboard extends CI_Controller {
 
-        function index() {
-
-            validSessionIsOut();
-
-            $data["title"] = "Dashboard";
-
-            $data["css"] = "template/pages/dashboard/css"; // path
-            $data["js"] = "template/pages/dashboard/js"; // path
-        
-
-
-            $data["content"] = $this->load->view("template/pages/dashboard/dashboard",$dt,true);
-
-            $this->load->view("template/index",$data);
-        }
-
-
+    function __construct() { 
+        parent::__construct();
     }
+
+    function index() {
+        $data["title"] = "Admin";
+
+        $data["css"] = "/admin/pages/test/css"; // path
+        $data["js"]  = ""; // path
+
+        $dt = array();
+        $data["content"] = "";
+
+        $this->load->view("admin/index",$data);
+    }
+
+}
