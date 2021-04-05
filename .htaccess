@@ -9,4 +9,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 #This last condition enables access to the images and css folders, and the robots.txt file
 #RewriteCond $1 !^(index\.php|public|images|robots\.txt|css)
 RewriteRule ^(.*)$ index.php/$1 [L]
+
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
 </IfModule>

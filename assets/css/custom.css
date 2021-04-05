@@ -1,0 +1,400 @@
+
+ @font-face {
+   font-family: 'play-regular';
+   src:url('../fonts/static/PlayfairDisplay-Regular.ttf');
+ }
+
+ @font-face {
+   font-family: 'play-bold';
+   src:url('../fonts/static/PlayfairDisplay-Bold.ttf');
+   font-weight: bold;
+ }
+
+ @font-face {
+   font-family: 'play-semibold';
+   src:url('../fonts/static/PlayfairDisplay-SemiBold.ttf');
+   font-weight: bold;
+ }
+
+ @font-face {
+   font-family: 'play-Medium';
+   src:url('../fonts/static/PlayfairDisplay-Medium.ttf');
+   font-weight: bold;
+ }
+body {
+  background-color: #fff;
+}
+ a {
+   text-decoration: none;
+   font-family: 'play-Medium';
+   letter-spacing: 0.5px;
+ }
+
+ li {list-style: none;}
+.email-us {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Tahoma';
+  line-height: 15px;
+  letter-spacing: 0.8px;
+  padding-top: 10px;
+  display: inline-block;
+}
+.sf-menu a {
+    font-size: 18px !important;
+    letter-spacing:0.8px;
+    color: #314649;
+    font-style: normal;
+    text-transform: capitalize !important;
+
+}
+
+.toolbar .uou-block-1a {
+  background-color:#314649;
+  padding: 2px 0;
+}
+.toolbar .social a {
+  font-size: 15px;
+  color:#fff;
+  font-family: Tahoma;
+  letter-spacing: 0.8px;
+}
+.toolbar .social li img {
+  width: 20px;
+  display: inline-block;
+  float: left;
+  margin-top: 5px;
+}
+
+.toolbar .social li p {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+}
+
+.uou-block-1a .social li a {
+  width: 158px;
+  text-align: right;
+}
+
+.home-page {
+  background-color: #fff;
+}
+
+.main-content {
+  background: #fff url('../images/bg-main.jpeg') no-repeat top left;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 150px;
+}
+.home-page .list-group-item {
+  padding: 0px;
+}
+.home-page .list-group-item a {
+  font-family: 'play-regular' , serif;
+  font-size:20px;
+  color: #314649;
+  display: block;
+  padding: 15px 30px;
+}
+
+.home-page .list-group-item a:hover {
+  color:#fff;
+  background-color: #314649;
+}
+
+.list-title {
+  background-color: #314649;
+  color:#fff;
+  font-family: 'play-bold';
+  padding: 12.5px 30px;
+  margin-top:30px;
+  font-size: 24px;
+  letter-spacing: 0.8px;
+}
+
+.home-banner {
+  margin-top: 30px;
+}
+
+.carding {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.popular-plants {
+
+}
+
+.popular-plants .box-title {
+  text-align: center;
+  width: 100%;
+}
+
+.popular-plants h5 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.popular-plants h2 {
+  font-family: "playfair-semibold", serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #314649;
+}
+.box-item {
+  position: relative;
+  border: solid 3px #f4f4f400;
+  margin: 12px 0;
+}
+
+.box-item:hover {
+  border-color: #f4f4f4;
+  transition: all .3s;
+}
+
+.plant-list-page .box-item:hover {
+  border-color: #f4f4f4;
+  transition: all .3s;
+}
+
+.box-item .box-item-info {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+}
+
+.box-item-info a {
+  font-size: 17px;
+  font-family: 'play-semibold';
+  color: #314649;
+}
+
+.box-item .box-item-image img {
+  width: 100%;
+  height: auto;
+}
+
+.box-item-info h3 a {
+  font-family: 'play-regular';
+  font-weight: bold;
+  color: #241305;
+  font-size: 24px;
+}
+
+.box-item .offer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.box-item-info p {
+  font-size:15px;
+  font-family: "Tahoma";
+}
+.box-item .offer .percent {
+  background: #314649;
+  color: #fff;
+  font-size: 14.5px;
+  border-radius: 5px;
+  font-weight: bold;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: "Tahoma";
+}
+
+/* about us */
+
+.about-page section {
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: -170px;
+}
+
+/* plant library */
+
+.plant-list-page {
+  padding-top: 50px;
+  padding-bottom: 85px;
+  background-color: #fff;
+}
+
+
+.banner-title-header {
+  background: url('../images/banner.jpeg') no-repeat;
+  min-height: 230px;
+  background-position: top left;
+  background-attachment: scroll;
+  background-size: cover;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #00000066;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transition: all .3s ease;
+}
+
+.st2-banner-content-child-page {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.st2-banner-content-child-page .banner-child-page-title {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 700;
+  padding-bottom: 15px;
+  color:#fff;
+}
+
+@media (max-width: 1700px) {
+.shoppage-fullwidth {
+    padding: 25px 0;
+}
+
+.shoppage-fullwidth {
+    background: #eeeeee;
+    padding: 36px 0;
+}
+.shoppage-fullwidth-box {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.shoppage-fullwidth .filter-left-search-form {
+  position: relative;
+}
+
+.shoppage-fullwidth .shoppage-fullwidth-action .filter-search-field {
+    width: 100%;
+    border-radius: 30px;
+    line-height: 46px;
+    font-size: 18px;
+    border: none;
+    height: 46px;
+    color: #dddddd;
+    padding: 0 15px 0 20px;
+    background: #fff;
+    font-family: "Playfair Display", serif;
+    outline: 0;
+}
+
+.shoppage-fullwidth .filter-search-submit {
+    width: 50px;
+    position: absolute;
+    top: 0;
+    font-size: 18px;
+    font-weight: 600;
+    height: 46px;
+    text-align: center;
+    right: 0;
+    color: #000;
+    padding: 0;
+    background: transparent;
+    line-height: 40px;
+    vertical-align: top;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.shoppage-fullwidth .shoppage-fullwidth-wrapper  .filter-left-showing-text {
+  font-size: 18px;
+  line-height: 46px;
+}
+
+.shoppage-fullwidth  .filter-right {
+  float: right;
+  color: #241305;
+  font-size: 18px;
+}
+
+.shoppage-fullwidth .shoppage-fullwidth-wrapper .shoppage-fullwidth-action .filter-right .filter-right-list .filter-right-item {
+  padding-left: 0px;
+  display: inline-block;
+  padding: 0 25px;
+}
+
+.blog-new-inner-left-title {
+  font-size: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
+.blogn-v1-blogposts-list {
+  list-style: none;
+  padding-bottom: 80px;
+  padding-left: 0px;
+}
+.blogn-v1-blogposts-link {
+  color: #241305;
+  font-size: 18px;
+  line-height: 36px;
+  -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s, border-color 0.3s ease 0s;
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s, border-color 0.3s ease 0s;
+}
+
+.v1-blogposts-item-count {
+  float: right;
+}
+
+
+
+/* plant detail*/
+.plant-detail-page {
+  background-color: #fff;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.product-detail-v1-title  {
+  font-family: "play-semibold"
+}
+.plant-detail-page .desc1 {
+  font-size: 15px;
+  font-family: "play-regular";
+  margin-top: 20px;
+}
+
+
+/* footer css */
+footer {
+    background: #000 url('../images/bg-footer.jpeg') no-repeat top left;
+    color: #aaaaaa;
+    background-size: cover;
+    margin-top: 25px;
+}
+
+.fotop {
+  border-bottom: solid 1px #ffffff3d;
+}
+
+.fobtm {
+  font-size: 14px;
+  color:#aaa;
+  font-family:Tahoma;
+}
+
+.fobtm p {
+  margin-top: 15px;
+  text-align: center;
+}
