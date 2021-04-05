@@ -56,3 +56,25 @@ $route['translate_uri_dashes'] = FALSE;
 $route['tentang-kami'] = 'about';
 $route['plant-library'] = 'plant_library';
 $route['detail/:any'] = 'plant_library/detail';
+
+// ======================== ADMIN =======================================
+$route["admin/auth/login/process"]  = "admin_auth/login_process";
+
+$route["admin/auth/login"]          = "admin_auth/login";
+$route["admin/plant/list"]          = "admin_plant/plant_list";
+$route["admin/plant/add"]           = "admin_plant/plant_add_process";
+
+$route["admin/plants"]              = "admin_plant/index";
+$route["admin/user"]                = "user/index";
+$route["admin/group"]               = "group/index";
+
+$route["admin"]                     = "admin_plant/index";// change to dashboard soon
+// ======================== END ADMIN ===================================
+
+// ======================== LANDING PAGE ================================
+$route["unauthorized"]          = "page/unauthorized";
+$route['default_controller']    = 'home';
+$route['404_override']          = '';
+$route['translate_uri_dashes']  = FALSE;
+
+// ======================== END LANDING PAGE ===========================

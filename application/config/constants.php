@@ -83,3 +83,28 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+// =================================== DATABASE CONSTANT ================================
+
+define("DB_DATABASE","ruang_bertanam");
+
+
+// =================================== ENV DATABASE CONSTANT ================================= // 
+
+// =================================== TABLE CONSTANT ====================================//
+define("USER_TABLE","m_users");
+define("GROUP_TABLE","m_groups");
+define("PLANT_TABLE","plants");
+// define("MENU_TABLE","m_menu");
+// define("MENU_ACTION_TABLE","m_menu_action");
+// define("GROUP_MENU_TABLE","tr_group_menu");
+// define("GROUP_MENU_ACTION_TABLE","tr_group_menu_action");
+// define("USERS_LOGIN_RECORD_TABLE","tr_users_login_records");
+// define("LOGIN_RECORD","tr_user_login_records");
+// define("PROJECT_UPDATE_TABLE","tr_project_update");
+// define("PROJECT_UPDATE_LOCATION_TABLE","tr_project_update_location");
+// define("PROJECT_STATUS_TABLE","m_nodelink_status");
+// define("PROJECT_UPDATE_LOCATION_RECORD","tr_project_update_location_record");
+
+
+// =================================== END TABLE CONSTANT ====================================//

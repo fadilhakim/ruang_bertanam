@@ -43,9 +43,9 @@
           </a>
           <div class="collapse" id="projects">
             <ul class="nav sub-menu">
-              <!-- <li class="nav-item">
-                <a href="<?= base_url("all-projects") ?>" class="nav-link">All Projects</a>
-              </li> -->
+              <li class="nav-item">
+                <a href="<?= base_url("admin/plants") ?>" class="nav-link">Plants</a>
+              </li>
             </ul>
           </div>
       </li>
@@ -71,7 +71,7 @@
       <li class="nav-item nav-category">Menu Admin</li>
 			
       <li class="nav-item">
-        <a href="<?=base_url("user")?>" class="nav-link">
+        <a href="<?=base_url("admin/user")?>" class="nav-link">
           <i class="link-icon" data-feather="user"></i>
           <span class="link-title">User List</span>
         </a>
@@ -79,7 +79,7 @@
       </li>
 			
 			<li class="nav-item">
-				<a href="<?=base_url("group")?>" class="nav-link">
+				<a href="<?=base_url("admin/group")?>" class="nav-link">
           <i class="link-icon" data-feather="layers"></i>
           <span class="link-title">Group List</span>
         </a>

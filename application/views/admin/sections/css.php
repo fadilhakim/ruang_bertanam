@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?=base_url("assets/vendors/core/core.css")?>">
+<link rel="stylesheet" href="<?=base_url("admin_assets/vendors/core/core.css")?>">
 <!-- endinject -->
 
 <!-- plugin css for this page -->
@@ -16,8 +16,7 @@
 <link rel="stylesheet" href="<?=base_url("admin_assets/css/demo_1/style.css")?>">
 <!-- End layout styles -->
 
-<link rel="shortcut icon" href="<?=base_url("admin_assets/images/logo_telkomsat.png")?>" />
-
+<link rel="icon" type="image/png" href="<?=base_url("assets/images/ruang_bertanam.png")?>"/>
 <style>
 
     .card-header-title {
