@@ -13,5 +13,5 @@
 <script src="<?=base_url("assets/js/gmap3.min.js")?>"></script>
 <script src="<?=base_url("assets/js/scripts.js")?>"></script>
 <script>
-  feather.replace()
+
 </script>

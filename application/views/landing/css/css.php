@@ -1,10 +1,9 @@
-<!-- Fonts Online -->
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
 <!-- Style Sheet -->
-<link rel="stylesheet" href="<?=base_url("assets/css/owl.carousel.css")?>">
+
 <link rel="stylesheet" href="<?=base_url("assets/css/main-style.css")?>">
 <link rel="stylesheet" href="<?=base_url("assets/css/style.css")?>">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="<?=base_url("assets/css/custom.css")?>">
+ <script src="https://unpkg.com/feather-icons"></script>
 
 <link rel="icon" type="image/png" href="<?=base_url("assets/images/ruang_bertanam.png")?>"/>
