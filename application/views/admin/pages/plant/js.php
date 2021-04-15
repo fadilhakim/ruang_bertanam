@@ -106,7 +106,7 @@ function plantTable() {
             {"data": "id",width:50},
             {"data": "plant_name",width:100},
             {"data": "price",width:200},
-            {"data": "type",width:200},
+            // {"data": "type",width:200},
             { data:"action", width:200}
         ],
         columnDefs:[

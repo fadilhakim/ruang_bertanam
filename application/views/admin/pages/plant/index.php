@@ -9,9 +9,11 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                     <h4 class="card-header-title">Plant List</h4>
+                     <h4 class="card-header-title" style="width:90%">Plant List</h4>
                      <div class="card-tools">
-                        
+                        <a class="btn btn-primary" href="<?=base_url("admin_plant/plant_add")?>"> 
+                            <i class='fa fa-plus'>&nbsp;</i>Add Plant 
+                        </a>
                      
                      </div>
                 </div>
@@ -22,7 +24,7 @@
                                 <th> ID</th>
                                 <th> Plant Name </th>
                                 <th> Price </th>
-                                <th> Type </th>
+                               
                                 <th> Action </th>
                             </thead>
                             <tbody>

@@ -16,13 +16,13 @@
 
             $data["title"] = "Login";
 
-            $data["css"] = "pages/login/css"; // path
-            $data["js"]  = "pages/login/js"; // path
+            $data["css"] = "admin/pages/login/css"; // path
+            $data["js"]  = "admin/pages/login/js"; // path
 
             $dt = array();
-            $data["content"] = $this->load->view("template/pages/login/login",$dt,true);
+            $data["content"] = $this->load->view("admin/pages/login/login",$dt,true);
 
-            $this->load->view("template/authentication",$data);
+            $this->load->view("admin/authentication",$data);
         }
 
         function pass() {

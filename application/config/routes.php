@@ -58,17 +58,40 @@ $route['plant-library'] = 'plant_library';
 $route['detail/:any'] = 'plant_library/detail';
 
 // ======================== ADMIN =======================================
-$route["admin/auth/login/process"]  = "admin_auth/login_process";
+// $route["admin/auth/login/process"]  = "admin_auth/login_process";
+// $route["admin/auth/login"]          = "admin_auth/login";
+$route["admin/plant/list"]                = "admin_plant/plant_list";
+$route["admin/plant/add"]                 = "admin_plant/plant_add";
+$route["admin/plant/detail"]              = "admin_plant/plant_detail";
+$route["admin/plant/add_process"]         = "admin_plant/plant_add_process";
+$route["admin/plant/update_process"]      = "admin_plant/plant_update_process";
 
-$route["admin/auth/login"]          = "admin_auth/login";
-$route["admin/plant/list"]          = "admin_plant/plant_list";
-$route["admin/plant/add"]           = "admin_plant/plant_add_process";
+$route["admin/plants"]                    = "admin_plant/index";
 
-$route["admin/plants"]              = "admin_plant/index";
-$route["admin/user"]                = "user/index";
-$route["admin/group"]               = "group/index";
+$route["admin/user"]                      = "user/index";
+$route["admin/group"]                     = "group/index";
+$route["admin/user/detail/:num"]          = "user/user_detail";
+$route["admin/user/update/process"]       = "user/user_update_process";
+$route["admin/user/add/process"]          = "user/user_add_process";
+$route["admin/user/list"]                 = "user/user_list";
+$route["admin/user/add"]                  = "user/user_add";
+$route["admin/user/delete"]               = "user/user_delete_process";
 
-$route["admin"]                     = "admin_plant/index";// change to dashboard soon
+$route["admin/group/roles/update"]        = "group/group_roles_update_process";
+$route["admin/group/roles/:num"]          = "group/group_roles";
+$route["admin/group/detail/:num"]         = "group/group_detail";
+$route["admin/group/update/process"]      = "group/group_update_process";
+$route["admin/group/add/process"]         = "group/group_add_process";
+$route["admin/group/list"]                = "group/group_list";
+$route["admin/group/add"]                 = "group/group_add";
+$route["admin/group/delete"]              = "group/group_delete_process";
+
+$route["admin/login/process"]             = "admin_auth/login_process";
+$route["admin/login"]                     = "admin_auth";
+$route["admin/login/pass"]                = "admin_auth/pass";
+$route["admin/logout"]                    = "admin_auth/logout";
+
+$route["admin"]                           = "admin_plant/index";// change to dashboard soon
 // ======================== END ADMIN ===================================
 
 // ======================== LANDING PAGE ================================

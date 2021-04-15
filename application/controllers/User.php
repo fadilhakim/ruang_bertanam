@@ -12,16 +12,16 @@
 
             $data["title"] = "User";
 
-            $data["css"] = "/template/pages/user/css"; // path
-            $data["js"] = "/template/pages/user/js"; // path
+            $data["css"] = "/admin/pages/user/css"; // path
+            $data["js"] = "/admin/pages/user/js"; // path
 
 
             $dt = array(
 
             );
-            $data["content"] = $this->load->view("template/pages/user/user_list",$dt,true);
+            $data["content"] = $this->load->view("admin/pages/user/user_list",$dt,true);
 
-            $this->load->view("template/index",$data);
+            $this->load->view("admin/index",$data);
         }
 
         function user_list() {
@@ -72,8 +72,8 @@
 
             $data["title"] = "User Add";
 
-            $data["css"] = "/template/pages/user/user_add_css"; // path 
-            $data["js"]  = "/template/pages/user/user_add_js"; // path
+            $data["css"] = "/admin/pages/user/user_add_css"; // path 
+            $data["js"]  = "/admin/pages/user/user_add_js"; // path
 
 
             $dt = array(
@@ -81,9 +81,9 @@
 				"get_user_nik" => $this->user_model->get_user_nik()
             );
 
-            $data["content"] = $this->load->view("template/pages/user/user_add",$dt,true);
+            $data["content"] = $this->load->view("admin/pages/user/user_add",$dt,true);
 
-            $this->load->view("template/index",$data);  
+            $this->load->view("admin/index",$data);  
 		}
 		
 		function get_user_nik_detail() {
@@ -108,8 +108,8 @@
 
             $data["title"] = "User Detail";
 
-            $data["css"] = "/template/pages/user/user_add_css"; // path 
-            $data["js"]  = "/template/pages/user/user_add_js"; // path
+            $data["css"] = "/admin/pages/user/user_add_css"; // path 
+            $data["js"]  = "/admin/pages/user/user_add_js"; // path
 
             $user_id = $this->uri->segment(3);
             
@@ -119,9 +119,9 @@
 				"get_user_nik" => $this->user_model->get_user_nik()
             );
 
-            $data["content"] = $this->load->view("template/pages/user/user_detail",$dt,true);
+            $data["content"] = $this->load->view("admin/pages/user/user_detail",$dt,true);
 
-            $this->load->view("template/index",$data);
+            $this->load->view("admin/index",$data);
         }
 
         function user_add_process() {

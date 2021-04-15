@@ -56,7 +56,7 @@
                 $order = $valid_columns[$col];
             }
 
-            $this->db->select("id,plant_name,price,type");
+            $this->db->select("id,plant_name,price");
             $result = $this->db;
             
             if($order != null)
@@ -97,7 +97,7 @@
                 'plant_name'  => $dt["plant_name"],
                 'price'       => $dt["price"],
                 "description" => $dt["description"],
-                'type'        => $dt["type"],
+                // 'type'        => $dt["type"],
             );
 
             return $this->db->insert(PLANT_TABLE, $data);  // Produces: INSERT INTO mytable (title, name, date) VALUES ('{$title}', '{$name}', '{$date}')
