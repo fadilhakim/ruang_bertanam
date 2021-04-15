@@ -28,7 +28,9 @@
             $data["css"] 		= "admin/pages/plant/css"; // path
             $data["js"] 		= "admin/pages/plant/plant_add_js"; // path
 
-            $dt = []; // passing the data here
+            $dt = [
+                "title" => $data["title"]
+            ]; // passing the data here
 
             $data["content"] 	= $this->load->view("admin/pages/plant/plant_add",$dt,true);
             
@@ -41,7 +43,9 @@
             $data["css"] 		= "admin/pages/plant/css"; // path
             $data["js"] 		= "admin/pages/plant/plant_update_js"; // path
 
-            $dt = []; // passing the data here
+            $dt = [
+                "title" => $data["title"]
+            ]; // passing the data here
 
             $data["content"] 	= $this->load->view("admin/pages/plant/plant_add",$dt,true);
             

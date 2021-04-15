@@ -9,7 +9,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                     <h4 class="card-header-title" style="width:90%">Plant Add</h4>
+                     <h4 class="card-header-title" style="width:90%"><?=$title?></h4>
                     
                 </div>
                 <div class="card-body">
@@ -23,7 +23,24 @@
                                 <label> Scientific Name</label>
                                 <input type="text" id="scientific_name" class="form-control" />
                             </div>
-                            
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-6">
+                                <label> Family Plant </label>
+                                <div class=" input-group">
+                                    <select class="form-control">
+                                        <option>-- Please Select Family Plant --</option>
+                                    </select>
+                                    <button class="btn btn-primary" type="button" id="button-addon2"> add Family Plant</button>
+                                </div>
+                            </div>
+                          
+                             <div class="form-group col-md-6">
+                                <label> Price </label>
+                                <input type="text" class="form-control" id="price" name="price">
+                            </div>
                         </div>
                         
                         <div class="form-group" >
