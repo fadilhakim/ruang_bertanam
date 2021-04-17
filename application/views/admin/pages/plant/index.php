@@ -11,7 +11,7 @@
                 <div class="card-header">
                      <h4 class="card-header-title" style="width:90%">Plant List</h4>
                      <div class="card-tools">
-                        <a class="btn btn-primary" href="<?=base_url("admin_plant/plant_add")?>"> 
+                        <a class="btn btn-primary" href="<?=base_url("admin/plant/add")?>"> 
                             <i class='fa fa-plus'>&nbsp;</i>Add Plant 
                         </a>
                      

@@ -94,9 +94,11 @@
 
         function plant_insert($dt) {
             $data = array(
-                'plant_name'  => $dt["plant_name"],
-                'price'       => $dt["price"],
-                "description" => $dt["description"],
+                'plant_name'        => $dt["plant_name"],
+                "scientific_name"   => $dt["scientific_name"],
+                "family_plant_id"   => $dt["family_plant_id"],
+                'price'             => $dt["price"],
+                "description"       => $dt["description"],
                 // 'type'        => $dt["type"],
             );
 
@@ -108,11 +110,11 @@
             $plant_id = $dt["plant_id"];
 
             $data = array(
-                'plantname'  => $dt["plantname"],
-                'fullname'  => $dt["fullname"],
-                'group_id'  => $dt["group_id"],
-                "status_id" => $dt["status_id"],
-                "email"     => $dt["email"],
+                'plant_name'        => $dt["plant_name"],
+                "scientific_name"   => $dt["scientific_name"],
+                "family_plant_id"   => $dt["family_plant_id"],
+                'price'             => $dt["price"],
+                "description"       => $dt["description"],
                 
             );
 

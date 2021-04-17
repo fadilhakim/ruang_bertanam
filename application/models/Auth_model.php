@@ -8,11 +8,11 @@
             parent::__construct();
         }
 
-        function login($nik,$password ){
+        function login($username,$password ){
 
             $result = $this->db
-            ->where("username",$nik)
-            // ->where("password",$password)
+            ->where("username",$username)
+            ->where("password",$password)
             ->where("status_id",1) // status active
             ->get(USER_TABLE)
             ->row_array();

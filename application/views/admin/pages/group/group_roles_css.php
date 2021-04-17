@@ -1,2 +1,2 @@
-<link rel="stylesheet" type="text/css" href="<?=base_url("assets/vendors/hummingbird/hummingbird-treeview.css")?>">
-<link rel="stylesheet" href="<?=base_url("assets/vendors/sweetalert2/sweetalert2.min.css")?>">
+<link rel="stylesheet" type="text/css" href="<?=base_url("admin_assets/vendors/hummingbird/hummingbird-treeview.css")?>">
+<link rel="stylesheet" href="<?=base_url("admin_assets/vendors/sweetalert2/sweetalert2.min.css")?>">

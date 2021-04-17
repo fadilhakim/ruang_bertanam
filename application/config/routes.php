@@ -97,7 +97,7 @@ $route["admin"]                           = "admin_plant/index";// change to das
 // ======================== LANDING PAGE ================================
 $route["unauthorized"]          = "page/unauthorized";
 $route['default_controller']    = 'home';
-$route['404_override']          = '';
+$route['404_override']          = 'page/notfound';;
 $route['translate_uri_dashes']  = FALSE;
 
 // ======================== END LANDING PAGE ===========================

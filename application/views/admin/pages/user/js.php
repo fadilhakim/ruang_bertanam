@@ -1,7 +1,7 @@
 <!-- plugin js for this page -->
-<script src="<?=base_url("assets/vendors/datatables.net/jquery.dataTables.js")?>"></script>
-<script src="<?=base_url("assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js")?>"></script>
-<script src="<?=base_url("assets/vendors/sweetalert2/sweetalert2.min.js")?>"></script>
+<script src="<?=base_url("admin_assets/vendors/datatables.net/jquery.dataTables.js")?>"></script>
+<script src="<?=base_url("admin_assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js")?>"></script>
+<script src="<?=base_url("admin_assets/vendors/sweetalert2/sweetalert2.min.js")?>"></script>
 <!-- end plugin js for this page -->
 
 <!-- custom js for this page -->
@@ -41,7 +41,7 @@ function confirmModal(data) {
 
 function delete_user(user_id) {
     $.ajax({
-        url:"<?=base_url("user/delete")?>",
+        url:"<?=base_url("admin/user/delete")?>",
         type:"post",
         data:{
             user_id:user_id
@@ -99,7 +99,7 @@ function userTable() {
                 foo:"bar"
                 // tambahan value
             },
-            url: "<?=base_url("user/list")?>",
+            url: "<?=base_url("admin/user/list")?>",
             type: 'POST'
         },
         columns:[

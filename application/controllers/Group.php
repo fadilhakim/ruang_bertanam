@@ -5,7 +5,7 @@
 		function __construct(){
             parent::__construct();
             validSessionIsOut();
-            $this->authorization->redirect_menu("group_setting");
+            // $this->authorization->redirect_menu("group_setting");
             $this->load->model("group_model");
         }
 
@@ -13,16 +13,16 @@
 
             $data["title"] = "Group";
 
-            $data["css"] = "pages/group/css"; // path
-            $data["js"] = "pages/group/js"; // path
+            $data["css"] = "admin/pages/group/css"; // path
+            $data["js"] = "admin/pages/group/js"; // path
 
 
             $dt = array(
 				
             );
-            $data["content"] = $this->load->view("template/pages/group/group_list",$dt,true);
+            $data["content"] = $this->load->view("admin/pages/group/group_list",$dt,true);
 
-            $this->load->view("index",$data);
+            $this->load->view("admin/index",$data);
 		}
 		
 		function group_list() {
@@ -79,8 +79,8 @@
 
             $data["title"] = "group Add";
 
-            $data["css"] = "pages/group/group_add_css"; // path 
-			$data["js"]  = "pages/group/group_add_js"; // path
+            $data["css"] = "admin/pages/group/group_add_css"; // path 
+			$data["js"]  = "admin/pages/group/group_add_js"; // path
 			
 			// $data["css"] = ""; // path 
             // $data["js"]  = ""; // path
@@ -90,9 +90,9 @@
                 
             );
 
-            $data["content"] = $this->load->view("pages/group/group_add",$dt,true);
+            $data["content"] = $this->load->view("admin/pages/group/group_add",$dt,true);
 
-            $this->load->view("index",$data);  
+            $this->load->view("admin/index",$data);  
         }
 
         function group_detail() {
@@ -101,8 +101,8 @@
 
             $data["title"] = "group Detail";
 
-            $data["css"] = "pages/group/group_add_css"; // path 
-            $data["js"]  = "pages/group/group_add_js"; // path
+            $data["css"] = "admin/pages/group/group_add_css"; // path 
+            $data["js"]  = "admin/pages/group/group_add_js"; // path
 
             $group_id = $this->uri->segment(3);
             
@@ -111,16 +111,16 @@
                
             );
 
-            $data["content"] = $this->load->view("template/pages/group/group_detail",$dt,true);
+            $data["content"] = $this->load->view("admin/pages/group/group_detail",$dt,true);
 
-            $this->load->view("template/index",$data);
+            $this->load->view("admin/index",$data);
         }
 
         function group_roles(){
             $data["title"] = "group Roles";
 
-            $data["css"] = "/pages/group/group_roles_css"; // path 
-            $data["js"]  = "/pages/group/group_roles_js"; // path
+            $data["css"] = "admin/pages/group/group_roles_css"; // path 
+            $data["js"]  = "admin/pages/group/group_roles_js"; // path
 
             $group_id = $this->uri->segment(3);
             $rs_group = $this->group_model->get_group_detail($group_id);
@@ -136,9 +136,9 @@
                
             );
 
-            $data["content"] = $this->load->view("template/pages/group/group_roles",$dt,true);
+            $data["content"] = $this->load->view("admin/pages/group/group_roles",$dt,true);
 
-            $this->load->view("template/index",$data);
+            $this->load->view("admin/index",$data);
         }
 
         function group_add_process() {

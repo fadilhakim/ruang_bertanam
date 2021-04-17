@@ -35,7 +35,7 @@
             $this->session->set_userdata("user_id",1);
             $this->session->set_userdata('username', "admin");
             $this->session->set_userdata('fullname', "admin development");
-            $this->session->set_userdata('email', "admin@sdtracking.com");
+            $this->session->set_userdata('email', "admin@gmail.com");
             $this->session->set_userdata('group_id', 1);
 
             $this->user_model->login_record([
@@ -51,10 +51,10 @@
 			$this->load->library("form_validation");
 			$this->load->model("user_model");
 
-            $nik      	= $this->input->post("nik",true);
+            $email      = $this->input->post("username",true);
             $password   = $this->input->post("password",true);
 
-            $this->form_validation->set_rules("nik","NIK","required");
+            $this->form_validation->set_rules("email","Email","required");
             $this->form_validation->set_rules("password","Password","required");
 
             if($this->form_validation->run()){
@@ -105,10 +105,10 @@
                 $this->load->library("form_validation");
                 $this->load->helper("general_helper");
 
-                $nik        = $this->input->post("nik",true);
+                $username   = $this->input->post("username",true);
                 $password   = $this->input->post("password",true);
 
-                $this->form_validation->set_rules("nik","NIK","required");
+                $this->form_validation->set_rules("username","Username","required");
                 $this->form_validation->set_rules("password","Password","required");
 
                 if($this->form_validation->run()){
@@ -116,7 +116,7 @@
                     $password = md5($password);
                     //$password = "";
 
-                    $check_user = $this->auth_model->login($nik, $password);
+                    $check_user = $this->auth_model->login($username, $password);
 
                     if($check_user) {
 
@@ -140,7 +140,7 @@
                     } else {
                         echo json_encode(array(
                             "logged_in" => false,
-                            "message" => "Your account is valid but, not registered in system yet. contact you administrator"
+                            "message" => "Your username or password are wrong"
                         ));
                     }
 

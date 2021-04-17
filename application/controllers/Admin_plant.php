@@ -102,12 +102,16 @@
 
                 $this->load->library("form_validation");
 
-                $plant_name     = $this->input->post("plant_name",true);
-                $price          = $this->input->post("price",true);
-                $description    = $this->input->post("description",true);
+                $plant_name         = $this->input->post("plant_name",true);
+                $scientific_name    = $this->input->post("scientific_name", true);
+                $family_plant_id    = $this->input->post("family_plant_id",true);
+                $price              = $this->input->post("price",true);
+                $description        = $this->input->post("description",true);
                 // $type           = $this->input->post("type",true);
 
                 $this->form_validation->set_rules("plant_name",'Plant Name',"required");
+                $this->form_validation->set_rules("scientific_name","Scientific Name","required");
+                $this->form_validation->set_rules("family_plant_id","Family Plant ID","required|numeric");
                 $this->form_validation->set_rules("price","price","required|numeric");
                 $this->form_validation->set_rules("description","Description","required");
                 // $this->form_validation->set_rules("type","Type","required");
@@ -117,9 +121,74 @@
                     // $password = md5($password);
 
                     $dt = [
-                        "plant_name"  => $plant_name,
-                        "price"       => $price,
-                        "description" => $description,
+                        "plant_name"        => $plant_name,
+                        "scientific_name"   => $scientific_name,
+                        "family_plant_id"   => $family_plant_id,
+                        "price"             => $price,
+                        "description"       => $description,
+                        // "type"        => $type,
+                        
+                        // "password"    => $password 
+                    ];
+
+                    // add user
+                    $this->plant_model->plant_insert($dt);
+
+                    echo json_encode(array(
+                        "success" => true,
+                        "message" => "You successfully add new plant" 
+                    ));
+                }else {
+                    echo json_encode(array(
+                        "success" => false,
+                        "message" => validation_errors() 
+                    ));
+                }
+
+            } else {
+                echo json_encode(array(
+                    "success" => false,
+                    "message" => "Method not allowed"
+                ));
+            }
+        }
+
+        function plant_update_process() {
+             if($_SERVER['REQUEST_METHOD'] == "POST") { 
+
+                $this->load->library("form_validation");
+
+                $plant_id           = $this->input->post("plnat_id");
+
+                $plant_name         = $this->input->post("plant_name",true);
+                $scientific_name    = $this->input->post("scientific_name", true);
+                $family_plant_id    = $this->input->post("family_plant_id",true);
+                $price              = $this->input->post("price",true);
+                $description        = $this->input->post("description",true);
+                // $type           = $this->input->post("type",true);
+
+                $this->form_validation->set_rules("plant_id","Plant ID","required|numeric");
+
+                $this->form_validation->set_rules("plant_name",'Plant Name',"required");
+                $this->form_validation->set_rules("scientific_name","Scientific Name","required");
+                $this->form_validation->set_rules("family_plant_id","Family Plant ID","required|numeric");
+                $this->form_validation->set_rules("price","price","required|numeric");
+                $this->form_validation->set_rules("description","Description","required");
+                // $this->form_validation->set_rules("type","Type","required");
+            
+                if($this->form_validation->run()){
+                    
+                    // $password = md5($password);
+
+                    $dt = [
+
+                        "plant_id"          => $plant_id, 
+
+                        "plant_name"        => $plant_name,
+                        "scientific_name"   => $scientific_name,
+                        "family_plant_id"   => $family_plant_id,
+                        "price"             => $price,
+                        "description"       => $description,
                         // "type"        => $type,
                         
                         // "password"    => $password 

@@ -1,5 +1,5 @@
-<script src="<?=base_url("assets/vendors/hummingbird/hummingbird-treeview.js")?>"></script>
-<script src="<?=base_url("assets/vendors/sweetalert2/sweetalert2.min.js")?>"></script>
+<script src="<?=base_url("admin_assets/vendors/hummingbird/hummingbird-treeview.js")?>"></script>
+<script src="<?=base_url("admin_assets/vendors/sweetalert2/sweetalert2.min.js")?>"></script>
 <script>
     function update_group_roles(){
 

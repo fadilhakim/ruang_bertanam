@@ -4,7 +4,7 @@
         function __construct(){
             parent::__construct();
             validSessionIsOut();
-            $this->authorization->redirect_menu("user_setting");
+            // $this->authorization->redirect_menu("user_setting");
             $this->load->model("user_model");
         }
 
@@ -243,51 +243,9 @@
                 ));
             }
         }
-		
-		function get_karyawan() {
-            $this->load->model("user_model");
-            
-            $params = [
+      
 
-            ];
-
-			$result = $this->user_model->get_karyawan($params);
-
-			echo json_encode([
-				"status" => "ok",
-				"result" => $result
-			]);
-        }
-        
-        function get_direktorat() {
-            $this->load->model("user_model");
-
-            $params = [
-                
-            ];
-
-			$result = $this->user_model->get_direktorat($params);
-
-			echo json_encode([
-				"status" => "ok",
-				"result" => $result
-			]);
-        }
-
-        function get_detail_karyawan() {
-            $this->load->model("user_model");
-
-            $params = [
-                "karyawan_id" => $this->input->get("pic")
-            ];
-
-			$result = $this->user_model->get_detail_karyawan($params);
-
-			echo json_encode([
-				"status" => "ok",
-				"result" => $result
-			]);
-        }
+      
 
         function test() {
             $a = $this->user_model->get_user_detail(1);

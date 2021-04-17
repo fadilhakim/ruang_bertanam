@@ -20,7 +20,7 @@
         <div class="row">
           <div class="col-lg-8">
 
-             <input style="z-index:999" type="text" name="project-update" id="project-update-search" placeholder="Search project ..." class="form-control">
+             <input style="z-index:999" type="text" name="project-update" id="project-update-search" placeholder="Search Plant ..." class="form-control">
             <!-- <select style="display:inline-block;" id="project-update-search" name="project-update">
               <option value="#">-- Cari Project --</option>
               <option value="all-projects/update/1">
@@ -42,12 +42,12 @@
           </li>
           <li class="nav-item dropdown nav-profile">
               <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="<?= base_url() ?>/assets/images/man.png" alt="userr">
+                  <img src="<?= base_url() ?>/admin_assets/images/man.png" alt="userr">
               </a>
               <div class="dropdown-menu" aria-labelledby="profileDropdown">
                   <div class="dropdown-header d-flex flex-column align-items-center">
                       <div class="figure mb-3">
-                          <img src="<?= base_url() ?>/assets/images/man.png" alt="">
+                          <img src="<?= base_url() ?>/admin_assets/images/man.png" alt="">
                       </div>
                       <div class="info text-center">
                           <p class="name font-weight-bold mb-0"><?=$this->session->userdata("fullname")?></p>

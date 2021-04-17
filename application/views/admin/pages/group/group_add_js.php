@@ -1,5 +1,5 @@
 
-<script src="<?=base_url("assets/vendors/sweetalert2/sweetalert2.min.js")?>"></script>
+<script src="<?=base_url("admin_assets/vendors/sweetalert2/sweetalert2.min.js")?>"></script>
 <script>
     function group_add() {
 

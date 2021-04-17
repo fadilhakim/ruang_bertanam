@@ -1,11 +1,11 @@
 
-<script src="<?=base_url("assets/vendors/sweetalert2/sweetalert2.min.js")?>"></script>
+<script src="<?=base_url("admin_assets/vendors/sweetalert2/sweetalert2.min.js")?>"></script>
 <script>
 
-	function user_nik_detail(id) {
+	function user_detail(id) {
 
 		$.ajax({
-			url:"<?=base_url("user/get_user_nik_detail")?>",
+			url:"<?=base_url("admin/user/detail")?>",
 			type:"POST",
             dataType:"json",
 			data:{
@@ -34,7 +34,7 @@
         // var password = $("#password").val()
 
         $.ajax({
-            url:"<?=base_url("user/add/process")?>",
+            url:"<?=base_url("admin/user/add/process")?>",
             type:"post",
             data:{
                 username:username,
@@ -101,7 +101,7 @@
         var password = $("#password").val()
 
         $.ajax({
-            url:"<?=base_url("user/update/process")?>",
+            url:"<?=base_url("admin/user/update/process")?>",
             type:"post",
             data:{
                 user_id:user_id,
@@ -176,7 +176,7 @@
 
             const karyawan_id = $("#user-add-form #karyawan_id").val()
             console.log("noo hammooonn", karyawan_id)
-            user_nik_detail(karyawan_id)
+            user_detail(karyawan_id)
         })
     })
 </script>

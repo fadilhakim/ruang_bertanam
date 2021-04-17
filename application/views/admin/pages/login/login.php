@@ -1,7 +1,7 @@
 <style type="text/css">
     
     .page-content {
-        background-image: url(./assets/images/login_bg.png);
+        background-image: url(<?=base_url("admin_assets/images/login_bg.png")?>);
         background-size: cover;
     }
 </style>
@@ -10,16 +10,20 @@
         
         <div class="col-md-6 col-xl-6 mx-auto">
             <div class="card">
-                <img style="position: absolute; right:20px; top:20px; width: 150px;" src="./assets/images/telkomsat-login.png">
+                <img style="position: absolute; right:20px; top:20px; width: 150px;" src="<?=base_url("admin_assets/images/logo.png")?>">
                 <div class="row">
                     <div class="col-md-12 pl-md-0">
                         <div class="auth-form-wrapper px-4 py-5">
-                        <h3 style="letter-spacing:1px;color:#152734 !important; margin-top: -30px;" href="#" class="noble-ui-logo d-block mb-2">SLWM MOM</h3>
+                        <h3 
+                            style="letter-spacing:1px;color:#152734 !important; margin-top: -30px;" 
+                            href="#" 
+                            class="noble-ui-logo d-block mb-2"
+                        >Ruang Bertanam</h3>
                         <h6 class="text-muted font-weight-normal mb-4">Please Log in to your account.</h6>
                         <form class="forms-sample" id="login-form">
                             <div class="form-group">
-                            <label for="form-email-login">NIK :</label>
-                                <input type="text" class="form-control" id="form-nik-login" placeholder="nik">
+                            <label for="form-email-login">Username :</label>
+                                <input type="text" class="form-control" id="form-username-login" placeholder="username">
                             </div>
                             <div class="form-group">
                             <label for="form-password-login">Password :</label>

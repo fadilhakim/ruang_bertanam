@@ -1,5 +1,5 @@
- <link rel="stylesheet" href="<?=base_url("assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css")?>">
- <link rel="stylesheet" href="<?=base_url("assets/vendors/sweetalert2/sweetalert2.min.css")?>">
+ <link rel="stylesheet" href="<?=base_url("admin_assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css")?>">
+ <link rel="stylesheet" href="<?=base_url("admin_assets/vendors/sweetalert2/sweetalert2.min.css")?>">
 
 
 

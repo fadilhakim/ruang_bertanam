@@ -46,6 +46,9 @@
               <li class="nav-item">
                 <a href="<?= base_url("admin/plants") ?>" class="nav-link">Plants</a>
               </li>
+              <li class="nav-item">
+                <a href="<?= base_url("admin/family_plants") ?>" class="nav-link">Family Plants</a>
+              </li>
             </ul>
           </div>
       </li>
