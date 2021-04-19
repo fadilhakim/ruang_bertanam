@@ -28,8 +28,9 @@
             $valid_columns  = array(
                 0=>'id',
                 1=>'plant_name',
-                2=>'description',
-                3=>'price',
+                2=>'scientific_name',
+                3=>'description',
+                4=>'price',
                
             );
 
@@ -56,7 +57,7 @@
                 $order = $valid_columns[$col];
             }
 
-            $this->db->select("id,plant_name,price");
+            $this->db->select("id,plant_name,scientific_name,price");
             $result = $this->db;
             
             if($order != null)
@@ -96,7 +97,7 @@
             $data = array(
                 'plant_name'        => $dt["plant_name"],
                 "scientific_name"   => $dt["scientific_name"],
-                "family_plant_id"   => $dt["family_plant_id"],
+                "m_family_plant_id" => $dt["family_plant_id"],
                 'price'             => $dt["price"],
                 "description"       => $dt["description"],
                 // 'type'        => $dt["type"],
@@ -112,7 +113,7 @@
             $data = array(
                 'plant_name'        => $dt["plant_name"],
                 "scientific_name"   => $dt["scientific_name"],
-                "family_plant_id"   => $dt["family_plant_id"],
+                "m_family_plant_id" => $dt["family_plant_id"],
                 'price'             => $dt["price"],
                 "description"       => $dt["description"],
                 
@@ -131,5 +132,10 @@
                 "id" => $plant_id
             ));
 		}
+
+        function plant_family_list() { 
+            $plant_family_list = $this->db->get("m_family_plant");
+            return $plant_family_list->result_array();
+        }
 
     }

@@ -4,7 +4,7 @@
 
         function __construct() { 
             parent::__construct();
-
+            validSessionIsOut();
             $this->load->model("plant_model");
         } 
 
@@ -29,7 +29,9 @@
             $data["js"] 		= "admin/pages/plant/plant_add_js"; // path
 
             $dt = [
-                "title" => $data["title"]
+                "title"             => $data["title"],
+                "button_text"       => "Add Plant",
+                "plant_family_list" => $this->plant_model->plant_family_list()
             ]; // passing the data here
 
             $data["content"] 	= $this->load->view("admin/pages/plant/plant_add",$dt,true);
@@ -44,7 +46,9 @@
             $data["js"] 		= "admin/pages/plant/plant_update_js"; // path
 
             $dt = [
-                "title" => $data["title"]
+                "title"         => $data["title"],
+                "button_text"   => "Update Plant",
+                "plant_family_list" => $this->plant_model->plant_family_list()
             ]; // passing the data here
 
             $data["content"] 	= $this->load->view("admin/pages/plant/plant_add",$dt,true);
@@ -80,9 +84,10 @@
             foreach($plants as $rows)
             {
                 $data[] = array(
-                    "id"         => $rows["id"],
-                    "plant_name" => $rows["plant_name"],
-                    "price"      => $rows["price"],
+                    "id"                => $rows["id"],
+                    "plant_name"        => $rows["plant_name"],
+                    "scientific_name"   => $rows["scientific_name"],
+                    "price"             => $rows["price"],
                     // "type"       => $rows["type"],
                     // action tak usah di definisikan
                 );
@@ -94,6 +99,30 @@
                 "recordsFiltered" => count($plants),
                 "data" => $data
             ]);
+        }
+
+        function get_plant_detail() { 
+
+            $this->load->library("form_validation");
+
+            $plant_id = $this->input->post("plant_id");
+
+            $this->form_validation->set_rules("plant_id",'Plant ID',"required|numeric");
+
+            if($this->form_validation->run()){
+               
+                echo json_encode(array(
+                    "success" => true,
+                    "data"    => $this->plant_model->get_plant_detail($plant_id),
+                    "message" => "You successfully add new plant" 
+                ));
+            } else {
+                 echo json_encode(array(
+                    "success" => false,
+                    "message" => validation_errors() 
+                ));
+                
+            }
         }
 
         function plant_add_process() {
@@ -213,6 +242,32 @@
                     "success" => false,
                     "message" => "Method not allowed"
                 ));
+            }
+        }
+
+        function plant_delete_process() { 
+            $this->load->library("form_validation");
+
+            $plant_id         = $this->input->post("plant_id",true);
+
+            $this->form_validation->set_rules("plant_id","Plant ID","required|integer");
+
+            if($this->form_validation->run()) {
+
+                $this->plant_model->plant_delete($plant_id);
+
+                echo json_encode([
+                    "status"    => 200,
+                    "success"   => true,
+                    "message"   => "you successfully delete Plant" 
+                ]);
+
+            } else {
+                 echo json_encode([
+                    "status"    => 200,
+                    "success"   => false,
+                    "message"   => validation_errors()
+                ]); 
             }
         }
 

@@ -64,6 +64,8 @@ function delete_plant(plant_id) {
                     res.message,
                     'success'
                 )
+
+                $('#plant-table').DataTable().ajax.reload();
             } else {
                 Swal.fire({
                     title: '<strong> Error !</strong>',
@@ -113,6 +115,7 @@ function plantTable() {
         columns:[
             {"data": "id",width:50},
             {"data": "plant_name",width:100},
+            {"data":"scientific_name",width:100},
             {"data": "price",width:200},
             // {"data": "type",width:200},
             { data:"action", width:200}

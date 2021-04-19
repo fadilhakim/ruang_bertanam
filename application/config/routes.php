@@ -63,8 +63,10 @@ $route['detail/:any'] = 'plant_library/detail';
 $route["admin/plant/list"]                = "admin_plant/plant_list";
 $route["admin/plant/add"]                 = "admin_plant/plant_add";
 $route["admin/plant/detail/:num"]         = "admin_plant/plant_detail";
+$route["admin/plant/get_plant_detail"]    = "admin_plant/get_plant_detail";
 $route["admin/plant/add_process"]         = "admin_plant/plant_add_process";
 $route["admin/plant/update_process"]      = "admin_plant/plant_update_process";
+$route["admin/plant/delete"]              = "admin_plant/plant_delete_process";
 
 $route["admin/plants"]                    = "admin_plant/index";
 

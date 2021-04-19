@@ -100,7 +100,7 @@ define("PLANT_TABLE","plants");
 // define("GROUP_MENU_TABLE","tr_group_menu");
 // define("GROUP_MENU_ACTION_TABLE","tr_group_menu_action");
 // define("USERS_LOGIN_RECORD_TABLE","tr_users_login_records");
-// define("LOGIN_RECORD","tr_user_login_records");
+define("LOGIN_RECORD","tr_user_login_records");
 // define("PROJECT_UPDATE_TABLE","tr_project_update");
 // define("PROJECT_UPDATE_LOCATION_TABLE","tr_project_update_location");
 // define("PROJECT_STATUS_TABLE","m_nodelink_status");

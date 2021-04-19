@@ -98,7 +98,7 @@
         }
 
         function login_process(){
-            validSessionIsIn();
+            // validSessionIsIn();
 
             // post method 
             if($_SERVER['REQUEST_METHOD'] == "POST") { 
@@ -158,7 +158,7 @@
         function logout(){
             validSessionIsOut();
             $this->session->sess_destroy();
-            redirect("/login");
+            redirect("admin/login");
         }
 
     }

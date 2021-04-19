@@ -13,8 +13,9 @@ function login(username, password) {
         },
         success:function(res){
             if(res.logged_in == true) {
+                // alert("masuk")
                 //window.location.replace("<?=base_url()?>");
-                window.location.reload()
+                location.reload()
             } else {
 				Swal.fire({
                     title: '<strong> Error !</strong>',

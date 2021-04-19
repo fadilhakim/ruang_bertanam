@@ -6,14 +6,21 @@
 <script>
 
     function add_plant() { 
+
+        var form = "#form-plant"
+
         $.ajax({
             url:"<?=base_url("admin/plant/add_process")?>",
             type:"post",
             data:{
-
+                plant_name:$(`${form} #plant_name`).val(),
+                scientific_name:$(`${form} #scientific_name`).val(),
+                family_plant_id:$(`${form} #family_plant_id`).val(),
+                price:$(`${form} #price`).val(),
+                description:$(`${form} #description`).val()
             },
             dataType:'json',
-            success:function(data) { 
+            success:function(res) { 
                 if(res.success === true) {
                     Swal.fire(
                         'Success!',
@@ -32,6 +39,22 @@
     }
 
     $(function(){
+
+        var form = "#form-plant"
+
+        $(`${form} #family_plant_id`).select2({
+            width:"80%",
+            display:"block"
+        })
+
+        $(form).submit(function(e){
+            add_plant()
+        })
+
+        $("#action_button").click(function(e){
+            add_plant()
+        })
+
 
     })
 

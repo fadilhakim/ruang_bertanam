@@ -23,6 +23,7 @@
                             <thead>
                                 <th> ID</th>
                                 <th> Plant Name </th>
+                                <th> Scientific Name </th>
                                 <th> Price </th>
                                
                                 <th> Action </th>

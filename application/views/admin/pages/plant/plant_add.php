@@ -14,14 +14,15 @@
                 </div>
                 <div class="card-body">
                     <form id="form-plant">
+                        <input type="hidden" id="plant_id" name="plant_id" value=<?=$this->uri->segment(4) ? $this->uri->segment(4) : "" ?> >
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label> Plant Name </label>
-                                <input type="text" id="plant_name" name="plant_name" class="form-control" />
+                                <input type="text" id="plant_name" name="plant_name" class="form-control" value="" />
                             </div>
                             <div class="form-group col-md-6">
                                 <label> Scientific Name</label>
-                                <input type="text" id="scientific_name" name='plant_name' class="form-control" />
+                                <input type="text" id="scientific_name" name='scientific_name' class="form-control" value="" />
                             </div>
                         </div>
 
@@ -31,7 +32,10 @@
                                 <label> Family Plant </label>
                                 <div class=" input-group">
                                     <select class="form-control" id="family_plant_id" name="family_plant_id">
-                                        <option>-- Please Select Family Plant --</option>
+                                        <option value="">-- Please Select Family Plant --</option>
+                                        <?php foreach($plant_family_list as $plant_family){ ?>
+                                            <option value="<?=$plant_family["id"]?>"><?=$plant_family["family_name"]?></option>
+                                        <?php } ?>
                                     </select>
                                     <button class="btn btn-primary" type="button" id="button-addon2"> add Family Plant</button>
                                 </div>
@@ -50,8 +54,8 @@
                         
                         <div class="row"> 
                             <div class="col-md-12">
-                                <button class="btn btn-primary"> 
-                                    Add Plant 
+                                <button class="btn btn-primary" type="button" id="action_button" > 
+                                    <?=$button_text?>
                                 </button>
                             </div>
                         </div>
