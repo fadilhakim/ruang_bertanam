@@ -183,11 +183,14 @@
         }
 
         function plant_update_process() {
+
+            error_reporting(1);
+
              if($_SERVER['REQUEST_METHOD'] == "POST") { 
 
                 $this->load->library("form_validation");
 
-                $plant_id           = $this->input->post("plnat_id");
+                $plant_id           = $this->input->post("plant_id");
 
                 $plant_name         = $this->input->post("plant_name",true);
                 $scientific_name    = $this->input->post("scientific_name", true);
@@ -224,11 +227,12 @@
                     ];
 
                     // add user
-                    $this->plant_model->plant_insert($dt);
+                    $this->plant_model->plant_update($dt);
+
 
                     echo json_encode(array(
                         "success" => true,
-                        "message" => "You successfully add new plant" 
+                        "message" => "You successfully updated plant" 
                     ));
                 }else {
                     echo json_encode(array(
